@@ -1,0 +1,34 @@
+<div class="game-screen" id="gameScreen" style="display: none;">
+  <div class="hud">
+    <div class="level-info" id="levelInfo">Level 1</div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <button class="menu-btn" id="menuBtn">Menu</button>
+  </div>
+  <canvas id="gameCanvas"></canvas>
+  
+  <div class="game-over" id="gameOver" style="display: none;">
+    <h2>GAME OVER</h2>
+    <p id="gameOverMessage"></p>
+    <button class="neon-button" id="retryBtn">Retry</button>
+    <button class="neon-button" id="backBtn1">Menu</button>
+  </div>
+  
+  <div class="victory" id="victory" style="display: none;">
+    <h2>LEVEL COMPLETE!</h2>
+    <p id="victoryMessage"></p>
+    <button class="neon-button" id="nextBtn">Next Level</button>
+    <button class="neon-button" id="backBtn2">Menu</button>
+  </div>
+</div>
+
+<script>
+  import { restartLevel, nextLevel, backToMenu } from '../scripts/game';
+  
+  document.getElementById('menuBtn')?.addEventListener('click', backToMenu);
+  document.getElementById('retryBtn')?.addEventListener('click', restartLevel);
+  document.getElementById('nextBtn')?.addEventListener('click', nextLevel);
+  document.getElementById('backBtn1')?.addEventListener('click', backToMenu);
+  document.getElementById('backBtn2')?.addEventListener('click', backToMenu);
+</script>

@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GameCanvas from '../components/GameCanvas.astro';
+import Menu from '../components/Menu.astro';
+---
+
+<Layout title="Neon Geometry Dash">
+  <div class="game-container">
+    <Menu />
+    <GameCanvas />
+  </div>
+</Layout>
+
+<script>
+  import { initGame } from '../scripts/game';
+  window.addEventListener('load', initGame);
+</script>

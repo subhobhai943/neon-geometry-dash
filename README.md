@@ -1,119 +1,110 @@
 # Neon Geometry Dash
 
-A vibrant, neon-themed endless runner game inspired by Geometry Dash, built with HTML5, CSS3, and JavaScript. Features multiple challenging levels, dynamic audio effects, and smooth gameplay mechanics.
+## 🚀 Version 2.0 - TypeScript + Astro
 
-## Features
+A high-performance, neon-themed Geometry Dash clone rebuilt with **TypeScript** and **Astro** for better type safety, maintainability, and blazing-fast performance.
 
-- **Neon Visual Style**: Eye-catching neon colors with glow effects and smooth animations
-- **Multiple Levels**: 3 progressively challenging levels with unique obstacle patterns
-- **Audio Effects**: Dynamic sound effects for jumps, collisions, and victories using Web Audio API
-- **Smooth Gameplay**: 60 FPS gameplay with responsive controls
-- **Particle Effects**: Dynamic particle system for visual feedback
-- **Trail Effect**: Player leaves a glowing trail for enhanced visuals
-- **Progress Tracking**: Real-time progress bar showing level completion
+## ✨ Features
+
+- **TypeScript**: Full type safety for robust game logic
+- **Astro Framework**: Modern, fast, component-based architecture
+- **Dual Game Modes**: Cube (jump) and Ship (fly) modes with portal switching
+- **Neon Visual Style**: Stunning gradient effects and smooth animations
+- **Multiple Levels**: 3 progressively challenging levels
+- **Audio Effects**: Dynamic Web Audio API sound generation
+- **Smooth Performance**: Optimized rendering with requestAnimationFrame
 - **Responsive Design**: Works on desktop and mobile devices
 
-## Game Mechanics
+## 🎮 Game Mechanics
 
 ### Controls
-- **Desktop**: Press SPACE or click to jump
-- **Mobile**: Tap the screen to jump
+- **Desktop**: Hold SPACE to jump/fly, release to fall
+- **Mobile**: Tap and hold screen to jump/fly
 
-### Levels
-1. **Level 1**: Basic obstacles - single spikes and blocks
-2. **Level 2**: Intermediate patterns - double obstacles, gaps, and platforms
-3. **Level 3**: Advanced challenges - stairs, tunnels, and wave patterns
+### Game Modes
+1. **Cube Mode**: Jump over obstacles by pressing space
+2. **Ship Mode**: Hold to fly up, release to glide down
+3. **Portals**: Transform between cube and ship modes
 
-### Obstacle Types
-- **Spikes**: Yellow triangular hazards on the ground
-- **Blocks**: Red square obstacles
-- **Platforms**: Green elevated platforms
-- **Ceiling Spikes**: Overhead hazards in advanced levels
+## 🛠️ Installation
 
-## Technologies Used
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
 
-- **HTML5 Canvas**: For rendering game graphics
-- **CSS3**: For styling and neon effects
-- **JavaScript**: Game logic and physics
-- **Web Audio API**: For dynamic sound generation
+### Setup
 
-## Installation & Setup
-
-### Option 1: Direct Play
-1. Clone or download this repository
-2. Open `index.html` in a modern web browser
-3. Start playing!
-
-### Option 2: Local Server (Recommended)
 ```bash
-# Using Python 3
-python -m http.server 8000
+# Install dependencies
+npm install
 
-# Using Node.js
-npx http-server
-```
-Then navigate to `http://localhost:8000`
+# Run development server
+npm run dev
 
-## File Structure
+# Build for production
+npm run build
 
-```
-neon-geometry-dash/
-│
-├── index.html          # Main HTML file
-├── styles.css          # Styling and neon effects
-├── game.js            # Game logic and mechanics
-└── README.md          # This file
+# Preview production build
+npm run preview
 ```
 
-## Game Configuration
+## 📁 Project Structure
 
-You can customize the game by modifying the CONFIG object in `game.js`:
-
-```javascript
-const CONFIG = {
-    GRAVITY: 0.6,           // Gravity strength
-    JUMP_FORCE: -12,        // Jump power
-    PLAYER_SIZE: 30,        // Player dimensions
-    SCROLL_SPEED: 5,        // Game speed
-    NEON_COLORS: {...}      // Color scheme
-};
+```
+/
+├── public/
+│   └── styles/
+│       └── global.css       # Global styles
+├── src/
+│   ├── components/
+│   │   ├── Menu.astro       # Main menu component
+│   │   └── GameCanvas.astro # Game canvas component
+│   ├── layouts/
+│   │   └── Layout.astro     # Base layout
+│   ├── pages/
+│   │   └── index.astro      # Main page
+│   └── scripts/
+│       ├── game.ts          # Game logic (TypeScript)
+│       └── types.ts         # Type definitions
+├── astro.config.mjs         # Astro configuration
+├── tsconfig.json            # TypeScript configuration
+└── package.json
 ```
 
-## Browser Compatibility
+## 🎨 Technologies
 
-- Chrome/Edge: ✅ Full support
-- Firefox: ✅ Full support
-- Safari: ✅ Full support
-- Mobile browsers: ✅ Touch controls supported
+- **Astro**: Modern web framework
+- **TypeScript**: Type-safe JavaScript
+- **HTML5 Canvas**: For rendering
+- **Web Audio API**: For sound effects
+- **CSS3**: For styling and animations
 
-## Performance Optimization
+## 🚀 Performance Optimizations
 
-- Canvas rendering optimized for 60 FPS
+- Time-based animation loop for consistent framerates
 - Efficient collision detection
-- Particle system with lifecycle management
-- Off-screen obstacle culling
+- Object pooling for particles
+- Off-screen culling for obstacles
+- Minimal DOM manipulation
+- Type-safe code prevents runtime errors
 
-## Future Enhancements
+## 🎯 Future Enhancements
 
-- [ ] More levels with increasing difficulty
-- [ ] Power-ups and collectibles
-- [ ] Leaderboard system
-- [ ] Background music
+- [ ] More game modes (Ball, UFO, Wave)
 - [ ] Level editor
-- [ ] Mobile app packaging
+- [ ] Music synchronization
+- [ ] Power-ups and collectibles
+- [ ] Online leaderboards
+- [ ] Custom level sharing
 
-## Credits
-
-Inspired by Geometry Dash by RobTop Games
-
-## License
+## 📄 License
 
 MIT License - Feel free to use and modify!
 
-## Contributing
+## 🎮 Play Now!
 
-Feel free to submit issues and pull requests!
+Open `index.html` in your browser or run the dev server to start playing!
 
 ---
 
-Enjoy the neon rush! 🎮✨
+Built with ❤️ using TypeScript & Astro

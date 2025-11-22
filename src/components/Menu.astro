@@ -1,0 +1,22 @@
+<div class="menu" id="menu">
+  <h1 class="neon-title">NEON DASH</h1>
+  <div class="menu-buttons">
+    <button class="neon-button" data-level="1">Level 1</button>
+    <button class="neon-button" data-level="2">Level 2</button>
+    <button class="neon-button" data-level="3">Level 3</button>
+  </div>
+  <div class="controls-info">
+    <p>HOLD to Jump/Fly • RELEASE to Fall</p>
+  </div>
+</div>
+
+<script>
+  import { startLevel } from '../scripts/game';
+  
+  document.querySelectorAll('.neon-button').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const level = parseInt((e.target as HTMLButtonElement).dataset.level || '1');
+      startLevel(level);
+    });
+  });
+</script>
